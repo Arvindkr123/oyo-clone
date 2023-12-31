@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Block from './Block';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -32,7 +33,18 @@ const Header = () => {
           title="+91 9315207665"
           para="Call us to book now."
         />
-        <Block src="/user.png" title="Login/Sign up" para="" />
+        <div className="flex items-center px-3">
+          <Image
+            alt="user login image"
+            src="/user.png"
+            width={200}
+            height={200}
+            className="w-10 h-10 rounded-full mr-5"
+          />
+          <Link href="/login">
+            <h3 className="font-bold">SignUp/Login</h3>
+          </Link>
+        </div>
       </div>
     </div>
   );
